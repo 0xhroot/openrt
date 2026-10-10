@@ -1,0 +1,24 @@
+[package]
+name = "openrt-netpol"
+description = "Default-deny egress policies per worker/workflow scope (M6.3); enforcement consults ModeManager"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+authors.workspace = true
+
+[dependencies]
+openrt-core = { workspace = true }
+openrt-persistence = { workspace = true }
+openrt-modes = { workspace = true }
+openrt-audit = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+thiserror = { workspace = true }
+tokio = { workspace = true }
+
+[dev-dependencies]
+tokio = { workspace = true, features = ["macros", "rt"] }
+
+[lints]
+workspace = true

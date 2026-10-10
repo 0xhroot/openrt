@@ -1,0 +1,23 @@
+[package]
+name = "openrt-industrial"
+description = "Advisory industrial intelligence: asset graph, telemetry analysis, RCA/FMEA, scenario copilot (M12.1-M12.7)"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+authors.workspace = true
+license.workspace = true
+
+[dependencies]
+openrt-core = { workspace = true }
+openrt-knowledge = { workspace = true }
+openrt-persistence = { workspace = true }
+openrt-evidence = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+thiserror = { workspace = true }
+
+[dev-dependencies]
+tokio = { workspace = true, features = ["rt-multi-thread", "macros"] }
+
+[lints]
+workspace = true

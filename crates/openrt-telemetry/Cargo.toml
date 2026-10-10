@@ -1,0 +1,19 @@
+[package]
+name = "openrt-telemetry"
+description = "OpenRT structured logging and domain event emission"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+authors.workspace = true
+
+[dependencies]
+openrt-core = { workspace = true }
+serde_json = { workspace = true }
+thiserror = { workspace = true }
+async-trait = { workspace = true }
+tokio = { workspace = true }
+tracing = { workspace = true }
+tracing-subscriber = { workspace = true }
+[lints]
+workspace = true

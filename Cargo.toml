@@ -1,0 +1,189 @@
+[workspace]
+resolver = "2"
+members = [
+    "crates/openrt-core",
+    "crates/openrt-config",
+    "crates/openrt-telemetry",
+    "crates/openrt-persistence",
+    "crates/openrt-models",
+    "crates/openrt-tools",
+    "crates/openrt-permissions",
+    "crates/openrt-resources",
+    "crates/openrt-agents",
+    "crates/openrt-blackboard",
+    "crates/openrt-orch",
+    "crates/openrt-computer",
+    "crates/openrt-sandbox",
+    "crates/openrt-safety",
+    "crates/openrt-checkpoint",
+    "crates/openrt-audit",
+    "crates/openrt-runtime",
+    "crates/openrt-cli",
+    "crates/openrt-modes",
+    "crates/openrt-verify",
+    "crates/openrt-scan",
+    "crates/openrt-registry",
+    "crates/openrt-bench",
+    "crates/openrt-router",
+    "crates/openrt-sched",
+    "crates/openrt-context-sched",
+    "crates/openrt-model-cache",
+    "crates/openrt-hierarchy",
+    "crates/openrt-provider-llamacpp",
+    "crates/openrt-provider-vllm",
+    "crates/openrt-ingest",
+    "crates/openrt-dataset",
+    "crates/openrt-embeddings",
+    "crates/openrt-workspace",
+    "crates/openrt-timeseries",
+    "crates/openrt-vectorindex",
+    "crates/openrt-vlm",
+    "crates/openrt-knowledge",
+    "crates/openrt-retrieval",
+    "crates/openrt-evidence",
+    "crates/openrt-verifier",
+    "crates/openrt-memory",
+    "crates/openrt-workspace-assets",
+    "crates/openrt-selfimprove",
+    "crates/openrt-compiler",
+    "crates/openrt-webui",
+    "crates/openrt-tui",
+    "crates/openrt-train",
+    "crates/openrt-policy",
+    "crates/openrt-secrets",
+    "crates/openrt-netpol",
+    "crates/openrt-enclave",
+    "crates/openrt-observability",
+    "crates/openrt-supervisor",
+    "crates/openrt-platform",
+    "crates/openrt-fabric",
+    "crates/openrt-database",
+    "crates/openrt-office",
+    "crates/openrt-browser",
+    "crates/openrt-mcp",
+    "crates/openrt-shield",
+    "crates/openrt-industrial",
+    "crates/openrt-trading",
+    "crates/integration-tests",
+]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+# FIX-1 (store cross-process lock): std File::try_lock requires rustc 1.89.
+rust-version = "1.89"
+authors = ["OpenRT"]
+license = "MIT"
+
+[workspace.dependencies]
+openrt-core = { path = "crates/openrt-core", version = "0.1.0" }
+openrt-config = { path = "crates/openrt-config", version = "0.1.0" }
+openrt-telemetry = { path = "crates/openrt-telemetry", version = "0.1.0" }
+openrt-persistence = { path = "crates/openrt-persistence", version = "0.1.0" }
+openrt-models = { path = "crates/openrt-models", version = "0.1.0" }
+openrt-tools = { path = "crates/openrt-tools", version = "0.1.0" }
+openrt-permissions = { path = "crates/openrt-permissions", version = "0.1.0" }
+openrt-resources = { path = "crates/openrt-resources", version = "0.1.0" }
+openrt-agents = { path = "crates/openrt-agents", version = "0.1.0" }
+openrt-blackboard = { path = "crates/openrt-blackboard", version = "0.1.0" }
+openrt-orch = { path = "crates/openrt-orch", version = "0.1.0" }
+openrt-computer = { path = "crates/openrt-computer", version = "0.1.0" }
+openrt-sandbox = { path = "crates/openrt-sandbox", version = "0.1.0" }
+openrt-safety = { path = "crates/openrt-safety", version = "0.1.0" }
+openrt-checkpoint = { path = "crates/openrt-checkpoint", version = "0.1.0" }
+openrt-audit = { path = "crates/openrt-audit", version = "0.1.0" }
+openrt-runtime = { path = "crates/openrt-runtime", version = "0.1.0" }
+openrt-cli = { path = "crates/openrt-cli", version = "0.1.0" }
+openrt-modes = { path = "crates/openrt-modes", version = "0.1.0" }
+openrt-verify = { path = "crates/openrt-verify", version = "0.1.0" }
+openrt-scan = { path = "crates/openrt-scan", version = "0.1.0" }
+openrt-registry = { path = "crates/openrt-registry", version = "0.1.0" }
+openrt-bench = { path = "crates/openrt-bench", version = "0.1.0" }
+openrt-router = { path = "crates/openrt-router", version = "0.1.0" }
+openrt-sched = { path = "crates/openrt-sched", version = "0.1.0" }
+openrt-context-sched = { path = "crates/openrt-context-sched", version = "0.1.0" }
+openrt-model-cache = { path = "crates/openrt-model-cache", version = "0.1.0" }
+openrt-hierarchy = { path = "crates/openrt-hierarchy", version = "0.1.0" }
+openrt-provider-llamacpp = { path = "crates/openrt-provider-llamacpp", version = "0.1.0" }
+openrt-provider-vllm = { path = "crates/openrt-provider-vllm", version = "0.1.0" }
+openrt-ingest = { path = "crates/openrt-ingest", version = "0.1.0" }
+openrt-dataset = { path = "crates/openrt-dataset", version = "0.1.0" }
+openrt-embeddings = { path = "crates/openrt-embeddings", version = "0.1.0" }
+openrt-vectorindex = { path = "crates/openrt-vectorindex", version = "0.1.0" }
+openrt-knowledge = { path = "crates/openrt-knowledge", version = "0.1.0" }
+openrt-retrieval = { path = "crates/openrt-retrieval", version = "0.1.0" }
+openrt-evidence = { path = "crates/openrt-evidence", version = "0.1.0" }
+openrt-verifier = { path = "crates/openrt-verifier", version = "0.1.0" }
+openrt-vlm = { path = "crates/openrt-vlm", version = "0.1.0" }
+openrt-memory = { path = "crates/openrt-memory", version = "0.1.0" }
+openrt-train = { path = "crates/openrt-train", version = "0.1.0" }
+openrt-workspace = { path = "crates/openrt-workspace", version = "0.1.0" }
+openrt-timeseries = { path = "crates/openrt-timeseries", version = "0.1.0" }
+openrt-workspace-assets = { path = "crates/openrt-workspace-assets", version = "0.1.0" }
+openrt-selfimprove = { path = "crates/openrt-selfimprove", version = "0.1.0" }
+openrt-compiler = { path = "crates/openrt-compiler", version = "0.1.0" }
+openrt-webui = { path = "crates/openrt-webui", version = "0.1.0" }
+openrt-tui = { path = "crates/openrt-tui", version = "0.1.0" }
+openrt-policy = { path = "crates/openrt-policy", version = "0.1.0" }
+openrt-secrets = { path = "crates/openrt-secrets", version = "0.1.0" }
+openrt-netpol = { path = "crates/openrt-netpol", version = "0.1.0" }
+openrt-shield = { path = "crates/openrt-shield", version = "0.1.0" }
+openrt-industrial = { path = "crates/openrt-industrial", version = "0.1.0" }
+openrt-trading = { path = "crates/openrt-trading", version = "0.1.0" }
+openrt-enclave = { path = "crates/openrt-enclave", version = "0.1.0" }
+openrt-observability = { path = "crates/openrt-observability", version = "0.1.0" }
+openrt-supervisor = { path = "crates/openrt-supervisor", version = "0.1.0" }
+openrt-platform = { path = "crates/openrt-platform", version = "0.1.0" }
+openrt-fabric = { path = "crates/openrt-fabric", version = "0.1.0" }
+openrt-database = { path = "crates/openrt-database", version = "0.1.0" }
+openrt-office = { path = "crates/openrt-office", version = "0.1.0" }
+openrt-browser = { path = "crates/openrt-browser", version = "0.1.0" }
+openrt-mcp = { path = "crates/openrt-mcp", version = "0.1.0" }
+
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+thiserror = "2.0"
+uuid = { version = "1.24", features = ["v4", "serde"] }
+chrono = { version = "0.4", features = ["serde", "clock"] }
+async-trait = "0.1"
+ring = "0.17"
+tokio = { version = "1.53", features = ["rt", "macros", "sync", "time", "fs", "io-util", "process", "signal"] }
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter", "json"] }
+clap = { version = "4.6", features = ["derive"] }
+reqwest = { version = "0.12", default-features = false, features = ["rustls-tls", "http2", "json", "stream"] }
+libc = "0.2"
+url = "2.5"
+sha2 = "0.10"
+base64 = "0.22"
+hex = "0.4"
+# Phase 7B database tools: embedded SQLite (bundled, offline, no system lib).
+rusqlite = { version = "0.31", features = ["bundled"] }
+# Ed25519 signatures for signed offline security bundles (ADR-003). MSRV 1.81
+# matches the workspace; default features off (no rand/rand_core needed — keys
+# are loaded from bytes, never generated at runtime).
+ed25519-dalek = { version = "2.2", default-features = false, features = ["alloc", "pkcs8", "zeroize"] }
+# Genuine PDF text extraction: FlateDecode stream decompression (pure Rust,
+# deterministic, offline). Introduced for Phase 4 multimodal intake.
+flate2 = "1.0"
+# Phase 5.1 TUI backend (M5.1: persistent workspace + session UX in TUI).
+# Offline-available (registry cache verified); crossterm 0.29 matches the
+# default ratatui-crossterm backend.
+# `unstable-rendered-line-info`: Paragraph::line_count — the chat stream is
+# bottom-anchored and needs the WRAPPED row count (logical lines != rows).
+ratatui = { version = "0.30", features = ["unstable-rendered-line-info"] }
+crossterm = "0.29"
+# Same crate ratatui-core measures with, so a width this workspace
+# computes is the width ratatui will actually paint. Measuring with one
+# implementation and rendering with another is how truncation ends up
+# overrunning its column.
+unicode-segmentation = "1.13"
+unicode-width = "0.2"
+
+[workspace.lints.rust]
+unsafe_code = "forbid"
+
+[profile.dev]
+# keep defaults; disable incremental compilation so target/debug/incremental
+# does not accumulate multi-GiB caches between sessions.
+incremental = false

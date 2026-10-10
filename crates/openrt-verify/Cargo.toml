@@ -1,0 +1,18 @@
+[package]
+name = "openrt-verify"
+description = "SHA-256 artifact verification and ADR-001 provenance chain (base vs derived)"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+authors.workspace = true
+license.workspace = true
+
+[dependencies]
+openrt-core = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+thiserror = { workspace = true }
+sha2 = { workspace = true }
+hex = { workspace = true }
+[lints]
+workspace = true

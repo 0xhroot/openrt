@@ -1,0 +1,24 @@
+[package]
+name = "openrt-provider-vllm"
+description = "Real vLLM backend behind the Phase 1 ModelProvider trait (feature-gated)"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+authors.workspace = true
+license.workspace = true
+
+[features]
+default = []
+vllm = ["dep:reqwest", "openrt-models/openai-http"]
+
+[dependencies]
+openrt-core = { workspace = true }
+openrt-models = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+thiserror = { workspace = true }
+async-trait = { workspace = true }
+tokio = { workspace = true, features = ["net"] }
+reqwest = { workspace = true, optional = true }
+[lints]
+workspace = true

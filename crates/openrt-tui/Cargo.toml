@@ -1,0 +1,52 @@
+[package]
+name = "openrt-tui"
+description = "OpenRT Phase 5.1 TUI: persistent workspace + session UX over the wired Runtime (UI adapter, no second state engine)"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+authors.workspace = true
+
+[dependencies]
+openrt-runtime = { workspace = true }
+openrt-compiler = { workspace = true }
+openrt-core = { workspace = true }
+openrt-config = { workspace = true }
+openrt-modes = { workspace = true }
+openrt-persistence = { workspace = true }
+openrt-permissions = { workspace = true }
+openrt-shield = { workspace = true }
+openrt-telemetry = { workspace = true }
+openrt-workspace = { workspace = true }
+openrt-industrial = { workspace = true }
+openrt-models = { workspace = true }
+openrt-registry = { workspace = true, features = ["hf"] }
+openrt-resources = { workspace = true }
+openrt-verify = { workspace = true }
+openrt-scan = { workspace = true }
+openrt-netpol = { workspace = true }
+openrt-workspace-assets = { workspace = true }
+openrt-audit = { workspace = true }
+reqwest = { workspace = true }
+openrt-tools = { workspace = true }
+openrt-orch = { workspace = true }
+serde_json = { workspace = true }
+thiserror = { workspace = true }
+tokio = { workspace = true, features = ["rt-multi-thread", "macros", "time"] }
+ratatui = { workspace = true }
+crossterm = { workspace = true }
+unicode-segmentation = { workspace = true }
+unicode-width = { workspace = true }
+async-trait = { workspace = true }
+
+[dev-dependencies]
+openrt-persistence = { workspace = true }
+openrt-models = { workspace = true }
+tokio = { workspace = true, features = ["rt-multi-thread", "macros"] }
+
+[lib]
+name = "openrt_tui"
+path = "src/lib.rs"
+
+[lints]
+workspace = true

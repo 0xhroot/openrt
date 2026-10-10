@@ -1,0 +1,32 @@
+[package]
+name = "openrt-enclave"
+description = "Operator-owned enclave workers: identity, leases, quarantine, model migration (M6.4, ADR-004)"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+authors.workspace = true
+
+[dependencies]
+openrt-core = { workspace = true }
+openrt-persistence = { workspace = true }
+openrt-audit = { workspace = true }
+openrt-modes = { workspace = true }
+openrt-verify = { workspace = true }
+openrt-registry = { workspace = true }
+openrt-orch = { workspace = true }
+openrt-safety = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+thiserror = { workspace = true }
+tokio = { workspace = true }
+sha2 = { workspace = true }
+hex = { workspace = true }
+uuid = { workspace = true }
+chrono = { workspace = true }
+
+[dev-dependencies]
+tokio = { workspace = true, features = ["macros", "rt"] }
+
+[lints]
+workspace = true

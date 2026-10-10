@@ -1,0 +1,77 @@
+[package]
+name = "openrt-cli"
+description = "OpenRT command-line interface"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+authors.workspace = true
+
+[[bin]]
+name = "openrt"
+path = "src/main.rs"
+
+[features]
+# The CLI is the operator-facing app for talking to a local Ollama by default;
+# it opts into the network client stack explicitly (SEC-07) rather than
+# inheriting it from the library defaults. Build with `--no-default-features`
+# for a dependency-clean CLI.
+default = ["ollama"]
+ollama = ["openrt-runtime/ollama", "openrt-vlm/ollama", "openrt-embeddings/ollama"]
+
+[dependencies]
+openrt-core = { workspace = true }
+openrt-config = { workspace = true }
+openrt-models = { workspace = true }
+openrt-tools = { workspace = true }
+openrt-telemetry = { workspace = true }
+openrt-runtime = { workspace = true }
+openrt-persistence = { workspace = true }
+openrt-workspace = { workspace = true }
+openrt-timeseries = { workspace = true }
+openrt-memory = { workspace = true }
+openrt-workspace-assets = { workspace = true }
+openrt-selfimprove = { workspace = true }
+openrt-industrial = { workspace = true }
+openrt-trading = { workspace = true }
+openrt-train = { workspace = true }
+openrt-webui = { workspace = true }
+openrt-tui = { workspace = true }
+openrt-checkpoint = { workspace = true }
+openrt-shield = { workspace = true }
+openrt-orch = { workspace = true }
+openrt-compiler = { workspace = true }
+openrt-registry = { workspace = true, features = ["hf"] }
+openrt-router = { workspace = true }
+openrt-modes = { workspace = true }
+openrt-fabric = { workspace = true }
+openrt-bench = { workspace = true }
+openrt-hierarchy = { workspace = true }
+openrt-scan = { workspace = true }
+openrt-verify = { workspace = true }
+# Host memory probe for the advisory execution-fit line `model register` prints.
+openrt-resources = { workspace = true }
+openrt-knowledge = { workspace = true }
+openrt-evidence = { workspace = true }
+openrt-verifier = { workspace = true }
+openrt-ingest = { workspace = true }
+openrt-vlm = { workspace = true }
+openrt-computer = { workspace = true }
+openrt-embeddings = { workspace = true }
+openrt-permissions = { workspace = true }
+openrt-policy = { workspace = true }
+openrt-audit = { workspace = true }
+openrt-secrets = { workspace = true }
+openrt-netpol = { workspace = true }
+openrt-sandbox = { workspace = true }
+openrt-enclave = { workspace = true }
+openrt-observability = { workspace = true }
+openrt-supervisor = { workspace = true }
+ed25519-dalek = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+thiserror = { workspace = true }
+clap = { workspace = true }
+tokio = { workspace = true, features = ["rt-multi-thread"] }
+[lints]
+workspace = true

@@ -1,0 +1,23 @@
+[package]
+name = "openrt-computer"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+description = "Computer-use tools (M2.3): jail-scoped filesystem write/list/move/delete and a terminal tool."
+publish = false
+
+[dependencies]
+openrt-tools = { workspace = true }
+openrt-permissions = { workspace = true }
+openrt-safety = { workspace = true }
+openrt-core = { workspace = true }
+openrt-platform = { workspace = true }
+openrt-vlm = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+thiserror = { workspace = true }
+async-trait = { workspace = true }
+tokio = { workspace = true, features = ["process", "io-util"] }
+[lints]
+workspace = true

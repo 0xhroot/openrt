@@ -1,0 +1,26 @@
+[package]
+name = "openrt-vlm"
+description = "OpenRT visual-language pipeline: images transport, honest vision capability status, engineering-drawing route"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+authors.workspace = true
+
+[features]
+default = []
+# Images transport over an Ollama-compatible HTTP endpoint. SEC-07: the
+# default library build carries no HTTP/TLS stack; the CLI/tests opt in.
+ollama = ["openrt-models/ollama", "dep:reqwest", "dep:base64"]
+
+[dependencies]
+openrt-core = { workspace = true }
+openrt-ingest = { workspace = true }
+openrt-models = { workspace = true }
+thiserror = { workspace = true }
+tokio = { workspace = true, features = ["time"] }
+reqwest = { workspace = true, optional = true }
+base64 = { workspace = true, optional = true }
+
+[lints]
+workspace = true

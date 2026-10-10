@@ -1,0 +1,28 @@
+[package]
+name = "openrt-compiler"
+description = "OpenRT Phase 6 workflow compiler: natural language → goal → decomposition → capability plan → validated DAG (compiled.* namespace)"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+authors.workspace = true
+
+[dependencies]
+openrt-core = { workspace = true }
+openrt-orch = { workspace = true }
+openrt-persistence = { workspace = true }
+openrt-tools = { workspace = true }
+openrt-permissions = { workspace = true }
+openrt-modes = { workspace = true }
+openrt-resources = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+thiserror = { workspace = true }
+tokio = { workspace = true, features = ["rt", "macros", "time"] }
+
+[lib]
+name = "openrt_compiler"
+path = "src/lib.rs"
+
+[lints]
+workspace = true

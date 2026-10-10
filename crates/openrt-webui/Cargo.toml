@@ -1,0 +1,33 @@
+[package]
+name = "openrt-webui"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+description = "OpenRT Phase 5.8 web UI: localhost-only workbench server with command palette (approval-gated in UI and headless)"
+
+[dependencies]
+openrt-selfimprove = { workspace = true }
+openrt-workspace-assets = { workspace = true }
+openrt-runtime = { workspace = true }
+openrt-tools = { workspace = true }
+openrt-shield = { workspace = true }
+openrt-compiler = { workspace = true }
+openrt-workspace = { workspace = true }
+openrt-core = { workspace = true }
+serde_json = { workspace = true }
+thiserror = { workspace = true }
+uuid = { workspace = true }
+tokio = { workspace = true, features = ["rt", "macros"] }
+
+[dev-dependencies]
+openrt-persistence = { workspace = true }
+openrt-models = { workspace = true }
+tokio = { workspace = true, features = ["rt-multi-thread", "macros", "time"] }
+
+[lib]
+name = "openrt_webui"
+path = "src/lib.rs"
+
+[lints]
+workspace = true

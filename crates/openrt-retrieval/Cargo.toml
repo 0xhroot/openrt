@@ -1,0 +1,23 @@
+[package]
+name = "openrt-retrieval"
+description = "Hybrid retrieval: BM25 + dense fusion, filters, rerankers (M9.6)"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+authors.workspace = true
+
+[dependencies]
+openrt-core = { workspace = true }
+openrt-models = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+thiserror = { workspace = true }
+tokio = { workspace = true, features = ["rt", "time"] }
+
+[dev-dependencies]
+async-trait = { workspace = true }
+tokio = { workspace = true, features = ["rt-multi-thread", "macros", "time"] }
+
+[lints]
+workspace = true

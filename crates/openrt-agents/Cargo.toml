@@ -1,0 +1,24 @@
+[package]
+name = "openrt-agents"
+description = "OpenRT agent abstraction and the minimal built-in agent"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+authors.workspace = true
+
+[dependencies]
+openrt-core = { workspace = true }
+openrt-models = { workspace = true }
+openrt-tools = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+thiserror = { workspace = true }
+async-trait = { workspace = true }
+tokio = { workspace = true }
+
+[dev-dependencies]
+# `DirectExecutor` is test-only (SEC-04): enabled for this crate's test build.
+openrt-tools = { workspace = true, features = ["demo"] }
+[lints]
+workspace = true

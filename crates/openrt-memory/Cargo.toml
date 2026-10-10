@@ -1,0 +1,31 @@
+[package]
+name = "openrt-memory"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+description = "OpenRT Phase 5.3 memory layer: working / episodic / semantic-workflow, deterministic over the one persistence store with fail-closed citations"
+
+[dependencies]
+openrt-core = { workspace = true }
+openrt-persistence = { workspace = true }
+openrt-embeddings = { workspace = true }
+openrt-knowledge = { workspace = true }
+sha2 = { workspace = true }
+hex = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+tokio = { workspace = true, features = ["rt", "macros"] }
+thiserror = { workspace = true }
+
+[dev-dependencies]
+openrt-persistence = { workspace = true }
+openrt-knowledge = { workspace = true }
+openrt-embeddings = { workspace = true }
+
+[lib]
+name = "openrt_memory"
+path = "src/lib.rs"
+
+[lints]
+workspace = true

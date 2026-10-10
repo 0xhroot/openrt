@@ -1,0 +1,16 @@
+{
+  "synthetic": true,
+  "notice": "SYNTHETIC DEMO DATA — fabricated relationships for the SIH hero demo.",
+  "relationships": [
+    {"synthetic": true, "subject": "pers.aria.khan", "predicate": "associated_with", "object": "org.nova.shell"},
+    {"synthetic": true, "subject": "pers.dev.moss", "predicate": "associated_with", "object": "org.nova.shell"},
+    {"synthetic": true, "subject": "org.nova.shell", "predicate": "operates", "object": "acct.nova.001"},
+    {"synthetic": true, "subject": "org.nova.shell", "predicate": "operates", "object": "acct.nova.002"},
+    {"synthetic": true, "subject": "pers.lena.volkov", "predicate": "signatory_of", "object": "acct.nova.001"},
+    {"synthetic": true, "subject": "acct.hold.777", "predicate": "transfers_to", "object": "acct.nova.001"},
+    {"synthetic": true, "subject": "acct.nova.001", "predicate": "transfers_to", "object": "acct.nova.002"},
+    {"synthetic": true, "subject": "acct.nova.002", "predicate": "transfers_to", "object": "acct.hold.777"},
+    {"synthetic": true, "subject": "pers.aria.khan", "predicate": "located_at", "object": "loc.pier9"},
+    {"synthetic": true, "subject": "pers.dev.moss", "predicate": "located_at", "object": "loc.pier9"}
+  ]
+}

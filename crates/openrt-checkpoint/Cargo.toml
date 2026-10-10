@@ -1,0 +1,28 @@
+[package]
+name = "openrt-checkpoint"
+description = "OpenRT checkpoints, recovery planning, dry-run and rollback foundations (P2.6, M2.6)"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+authors.workspace = true
+
+[dependencies]
+openrt-core = { workspace = true }
+openrt-persistence = { workspace = true }
+openrt-blackboard = { workspace = true }
+openrt-orch = { workspace = true }
+openrt-agents = { workspace = true }
+openrt-tools = { workspace = true }
+openrt-telemetry = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+thiserror = { workspace = true }
+async-trait = { workspace = true }
+tokio = { workspace = true }
+sha2 = { workspace = true }
+base64 = { workspace = true }
+hex = { workspace = true }
+uuid = { workspace = true }
+[lints]
+workspace = true

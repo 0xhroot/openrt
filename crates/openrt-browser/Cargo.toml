@@ -1,0 +1,28 @@
+[package]
+name = "openrt-browser"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+description = "Phase 7B browser automation: Firefox BiDi backend over a pure-Rust WebSocket client + policy-gated browser.* tools"
+publish = false
+
+[dependencies]
+openrt-fabric = { workspace = true }
+openrt-tools = { workspace = true }
+openrt-config = { workspace = true }
+openrt-modes = { workspace = true }
+openrt-netpol = { workspace = true }
+serde_json = { workspace = true }
+async-trait = { workspace = true }
+tokio = { workspace = true, features = ["rt", "time", "macros", "process"] }
+base64 = { workspace = true }
+url = { workspace = true }
+uuid = { workspace = true }
+
+[dev-dependencies]
+openrt-persistence = { workspace = true }
+hex = { workspace = true }
+
+[lints]
+workspace = true

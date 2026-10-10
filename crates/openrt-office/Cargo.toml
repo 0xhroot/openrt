@@ -1,0 +1,27 @@
+[package]
+name = "openrt-office"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+description = "Phase 7B office automation: pure-Rust OOXML (XLSX/PPTX/DOCX) + real render/export backend"
+publish = false
+
+[dependencies]
+openrt-fabric = { workspace = true }
+openrt-tools = { workspace = true }
+openrt-config = { workspace = true }
+openrt-verify = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+thiserror = { workspace = true }
+async-trait = { workspace = true }
+tokio = { workspace = true, features = ["rt", "time", "macros", "process", "fs"] }
+flate2 = { workspace = true }
+uuid = { workspace = true }
+
+[dev-dependencies]
+openrt-persistence = { workspace = true }
+
+[lints]
+workspace = true

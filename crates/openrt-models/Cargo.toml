@@ -1,0 +1,29 @@
+[package]
+name = "openrt-models"
+description = "OpenRT model provider abstraction, mock and Ollama providers"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+authors.workspace = true
+
+[features]
+default = []
+# Ollama provider is never a hard dependency; the trait and mock always build.
+# SEC-07: the default build (libraries) carries no HTTP/TLS stack; the CLI
+# opts into Ollama explicitly through its own `ollama` feature.
+ollama = ["dep:reqwest"]
+# Minimal OpenAI-compatible HTTP client shared by the llama.cpp and vLLM
+# provider crates. Same policy as `ollama`: off unless explicitly requested.
+openai-http = ["dep:reqwest"]
+
+[dependencies]
+openrt-core = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+thiserror = { workspace = true }
+async-trait = { workspace = true }
+tokio = { workspace = true, features = ["net", "sync"] }
+reqwest = { workspace = true, optional = true }
+[lints]
+workspace = true

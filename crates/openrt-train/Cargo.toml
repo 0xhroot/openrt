@@ -1,0 +1,22 @@
+[package]
+name = "openrt-train"
+description = "Honest model-adaptation experiment framework: SFT/LoRA/QLoRA records, backend probe, metric regression evaluation (M12.16)"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+authors.workspace = true
+license.workspace = true
+
+[dependencies]
+openrt-core = { workspace = true }
+openrt-knowledge = { workspace = true }
+openrt-persistence = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+thiserror = { workspace = true }
+
+[dev-dependencies]
+tokio = { workspace = true, features = ["rt-multi-thread", "macros"] }
+
+[lints]
+workspace = true

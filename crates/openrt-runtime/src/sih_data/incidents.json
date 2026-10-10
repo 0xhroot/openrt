@@ -1,0 +1,8 @@
+{
+  "synthetic": true,
+  "notice": "SYNTHETIC DEMO DATA — fabricated incidents for the SIH hero demo.",
+  "incidents": [
+    {"synthetic": true, "id": "inc.s-01", "at": "2026-01-05", "title": "Structured deposits repeated below the reporting threshold", "location": "loc.pier9"},
+    {"synthetic": true, "id": "inc.s-02", "at": "2026-01-10", "title": "Ledger handover observed between synthetic suspects", "location": "loc.pier9"}
+  ]
+}

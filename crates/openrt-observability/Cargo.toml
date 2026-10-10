@@ -1,0 +1,25 @@
+[package]
+name = "openrt-observability"
+description = "Production observability extending Phase 5 telemetry (M6.4, ADR-005): retention, health, export gate"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+authors.workspace = true
+
+[dependencies]
+openrt-core = { workspace = true }
+openrt-persistence = { workspace = true }
+openrt-telemetry = { workspace = true }
+openrt-modes = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+thiserror = { workspace = true }
+tokio = { workspace = true }
+uuid = { workspace = true }
+
+[dev-dependencies]
+tokio = { workspace = true, features = ["macros", "rt"] }
+
+[lints]
+workspace = true

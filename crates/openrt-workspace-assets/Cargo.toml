@@ -1,0 +1,24 @@
+[package]
+name = "openrt-workspace-assets"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+description = "OpenRT Phase 5.4/5.5 assets: skills, instincts, hooks, rules, agent genome, skill generation, reusable workflows (assets.* namespace)"
+
+[dependencies]
+openrt-core = { workspace = true }
+openrt-persistence = { workspace = true }
+sha2 = { workspace = true }
+hex = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+thiserror = { workspace = true }
+tokio = { workspace = true, features = ["rt", "macros"] }
+
+[lib]
+name = "openrt_workspace_assets"
+path = "src/lib.rs"
+
+[lints]
+workspace = true

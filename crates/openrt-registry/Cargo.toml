@@ -1,0 +1,38 @@
+[package]
+name = "openrt-registry"
+description = "Model registry: immutable manifests, metadata, lifecycle, install (content-addressed blobs), HF discovery, Ctrl+P library"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+authors.workspace = true
+license.workspace = true
+
+[features]
+default = []
+# Hugging Face discovery + remote install are opt-in network features. Without
+# them the registry still works fully offline: curated library, local import,
+# verification, scanning, activation.
+hf = ["dep:reqwest"]
+
+[dependencies]
+openrt-core = { workspace = true }
+openrt-config = { workspace = true }
+openrt-persistence = { workspace = true }
+openrt-verify = { workspace = true }
+openrt-models = { workspace = true }
+openrt-scan = { workspace = true }
+openrt-modes = { workspace = true }
+openrt-audit = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+thiserror = { workspace = true }
+sha2 = { workspace = true }
+hex = { workspace = true }
+async-trait = { workspace = true }
+tokio = { workspace = true }
+reqwest = { workspace = true, optional = true }
+
+[dev-dependencies]
+ed25519-dalek = { workspace = true }
+[lints]
+workspace = true

@@ -1,0 +1,22 @@
+[package]
+name = "openrt-evidence"
+description = "Append-only evidence graph + knowledge graph: claims ↔ passages ↔ documents with tamper detection (M9.7)"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+authors.workspace = true
+
+[dependencies]
+openrt-core = { workspace = true }
+openrt-knowledge = { workspace = true }
+openrt-persistence = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+thiserror = { workspace = true }
+
+[dev-dependencies]
+tokio = { workspace = true, features = ["rt-multi-thread", "macros"] }
+
+[lints]
+workspace = true

@@ -1,0 +1,28 @@
+[package]
+name = "openrt-workspace"
+description = "OpenRT persistent workspace overlay (M5.1) — durable workspace identity + consolidated session/workspace map over the single store (ADR-006); never duplicates foundation records"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+authors.workspace = true
+
+[dependencies]
+openrt-persistence = { workspace = true }
+openrt-core = { workspace = true }
+openrt-embeddings = { workspace = true }
+openrt-audit = { workspace = true }
+openrt-checkpoint = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+thiserror = { workspace = true }
+sha2 = { workspace = true }
+async-trait = { workspace = true }
+tokio = { workspace = true }
+tracing = { workspace = true }
+
+[dev-dependencies]
+openrt-embeddings = { workspace = true }
+
+[lints]
+workspace = true

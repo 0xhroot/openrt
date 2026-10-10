@@ -1,0 +1,22 @@
+[package]
+name = "openrt-model-cache"
+description = "Content-addressed model cache metadata (LRU, pin, promote/demote) per ADR-009"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+authors.workspace = true
+license.workspace = true
+
+[dependencies]
+openrt-core = { workspace = true }
+openrt-hierarchy = { workspace = true }
+openrt-persistence = { workspace = true }
+openrt-verify = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+thiserror = { workspace = true }
+sha2 = { workspace = true }
+hex = { workspace = true }
+tokio = { workspace = true }
+[lints]
+workspace = true

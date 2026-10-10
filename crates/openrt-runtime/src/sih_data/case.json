@@ -1,0 +1,10 @@
+{
+  "synthetic": true,
+  "notice": "SYNTHETIC DEMO DATA — fabricated for the OpenRT/SIH demonstration. No real persons, identifiers, or accounts.",
+  "case_id": "case.sih-demo",
+  "title": "Operation Synthetic Ledger (SYNTHETIC DEMO CASE)",
+  "jurisdiction": "Demo Precinct 13",
+  "opened_at": "2026-01-02T00:00:00Z",
+  "summary": "Synthetic fraud-network investigation used by the CyberSaarthi + OpenRT hero demo. Every entity, phone number, account, and transaction below is fabricated demo data.",
+  "hypothesis": "Aria Khan transferred funds from account HOLD-777 into account NOVA-001 on 2026-01-03."
+}

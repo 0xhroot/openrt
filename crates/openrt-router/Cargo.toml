@@ -1,0 +1,25 @@
+[package]
+name = "openrt-router"
+description = "Model router: filter-then-rank selection with explicit rejection reasons"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+authors.workspace = true
+license.workspace = true
+
+[dependencies]
+openrt-core = { workspace = true }
+openrt-registry = { workspace = true }
+openrt-modes = { workspace = true }
+openrt-persistence = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+thiserror = { workspace = true }
+
+[dev-dependencies]
+openrt-scan = { workspace = true }
+openrt-verify = { workspace = true }
+ed25519-dalek = { workspace = true }
+tokio = { workspace = true }
+[lints]
+workspace = true

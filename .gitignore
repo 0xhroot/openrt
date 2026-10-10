@@ -1,0 +1,30 @@
+# Build output
+/target
+
+# Scratch space
+/tmp
+*.local
+
+# Secrets / local environment — never commit
+.env
+.env.*
+
+# Local runtime home if created inside the repo
+.openrt/
+
+# ECC / opencode configuration — local agent tooling, not part of OpenRT
+.opencode/
+
+# Downloaded model weights — never commit (models/ holds multi-GB GGUF files)
+/models/
+*.gguf
+*.safetensors
+*.gguf.part
+
+# Local workspace data produced at runtime (repo root only —
+# crates/openrt-workspace is source code and MUST stay tracked)
+/openrt-workspace/
+
+# Editor / OS noise
+*.swp
+.DS_Store

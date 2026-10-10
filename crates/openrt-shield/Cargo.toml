@@ -1,0 +1,25 @@
+[package]
+name = "openrt-shield"
+description = "AgentShield: security intelligence layer — SecurityFinding model + detectors consumed by the existing gate/policy/kill-switch authorities (M10.9)"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+authors.workspace = true
+
+[dependencies]
+openrt-core = { workspace = true }
+openrt-evidence = { workspace = true }
+openrt-persistence = { workspace = true }
+openrt-permissions = { workspace = true }
+openrt-tools = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+thiserror = { workspace = true }
+uuid = { workspace = true }
+
+[dev-dependencies]
+tokio = { workspace = true, features = ["rt-multi-thread", "macros"] }
+
+[lints]
+workspace = true

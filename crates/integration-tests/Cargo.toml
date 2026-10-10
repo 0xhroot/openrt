@@ -1,0 +1,76 @@
+[package]
+name = "integration-tests"
+description = "OpenRT end-to-end integration tests"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+authors.workspace = true
+
+[dev-dependencies]
+openrt-core = { workspace = true }
+openrt-config = { workspace = true }
+openrt-models = { workspace = true, features = ["ollama"] }
+openrt-tools = { workspace = true }
+openrt-permissions = { workspace = true }
+openrt-resources = { workspace = true }
+openrt-agents = { workspace = true }
+openrt-telemetry = { workspace = true }
+openrt-persistence = { workspace = true }
+openrt-checkpoint = { workspace = true }
+openrt-runtime = { workspace = true }
+openrt-orch = { workspace = true }
+openrt-compiler = { workspace = true }
+openrt-blackboard = { workspace = true }
+openrt-computer = { workspace = true }
+openrt-audit = { workspace = true }
+openrt-modes = { workspace = true }
+openrt-registry = { workspace = true }
+openrt-router = { workspace = true }
+openrt-scan = { workspace = true }
+openrt-verify = { workspace = true }
+ed25519-dalek = { workspace = true }
+async-trait = { workspace = true }
+serde_json = { workspace = true }
+uuid = { workspace = true }
+openrt-workspace = { workspace = true }
+openrt-workspace-assets = { workspace = true }
+openrt-selfimprove = { workspace = true }
+openrt-timeseries = { workspace = true }
+openrt-shield = { workspace = true }
+openrt-tui = { workspace = true }
+openrt-webui = { workspace = true }
+openrt-policy = { workspace = true }
+openrt-secrets = { workspace = true }
+openrt-netpol = { workspace = true }
+openrt-enclave = { workspace = true }
+openrt-observability = { workspace = true }
+openrt-supervisor = { workspace = true }
+openrt-safety = { workspace = true }
+openrt-platform = { workspace = true }
+openrt-fabric = { workspace = true }
+openrt-sandbox = { workspace = true }
+openrt-database = { workspace = true }
+openrt-office = { workspace = true }
+openrt-ingest = { workspace = true }
+openrt-industrial = { workspace = true }
+openrt-trading = { workspace = true }
+openrt-train = { workspace = true }
+openrt-hierarchy = { workspace = true }
+openrt-bench = { workspace = true }
+openrt-memory = { workspace = true }
+openrt-vlm = { workspace = true, features = ["ollama"] }
+openrt-embeddings = { workspace = true, features = ["ollama"] }
+openrt-knowledge = { workspace = true }
+openrt-evidence = { workspace = true }
+openrt-retrieval = { workspace = true }
+openrt-verifier = { workspace = true }
+flate2 = { workspace = true }
+openrt-browser = { workspace = true }
+openrt-mcp = { workspace = true }
+tokio = { workspace = true, features = ["rt-multi-thread", "macros", "time"] }
+
+[lib]
+path = "src/lib.rs"
+[lints]
+workspace = true

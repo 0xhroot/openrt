@@ -1,0 +1,23 @@
+[package]
+name = "openrt-selfimprove"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+description = "OpenRT Phase 5.6/5.7 self-improvement: approval-gated self-debugging, self-optimization, research/review loops, learning from execution history (improve.* namespace)"
+
+[dependencies]
+openrt-core = { workspace = true }
+openrt-persistence = { workspace = true }
+openrt-workspace-assets = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+thiserror = { workspace = true }
+tokio = { workspace = true, features = ["rt", "macros"] }
+
+[lib]
+name = "openrt_selfimprove"
+path = "src/lib.rs"
+
+[lints]
+workspace = true

@@ -1,0 +1,15 @@
+{
+  "synthetic": true,
+  "notice": "SYNTHETIC DEMO DATA — 555-01xx numbers are reserved fictional ranges. No real personal data.",
+  "entities": [
+    {"synthetic": true, "id": "pers.aria.khan", "kind": "person", "label": "Aria Khan", "aliases": ["A.K."], "identifiers": ["+1-555-0101"]},
+    {"synthetic": true, "id": "pers.dev.moss", "kind": "person", "label": "Dev Moss", "aliases": [], "identifiers": ["+1-555-0102"]},
+    {"synthetic": true, "id": "pers.lena.volkov", "kind": "person", "label": "Lena Volkov", "aliases": [], "identifiers": ["+1-555-0103"]},
+    {"synthetic": true, "id": "pers.robin.vale", "kind": "person", "label": "Det. Robin Vale", "aliases": ["R. Vale"], "identifiers": ["+1-555-0199"]},
+    {"synthetic": true, "id": "org.nova.shell", "kind": "organization", "label": "Nova Shell Trading", "aliases": ["Nova Shell"], "identifiers": []},
+    {"synthetic": true, "id": "acct.hold.777", "kind": "account", "label": "Account HOLD-777", "aliases": [], "identifiers": []},
+    {"synthetic": true, "id": "acct.nova.001", "kind": "account", "label": "Account NOVA-001", "aliases": [], "identifiers": []},
+    {"synthetic": true, "id": "acct.nova.002", "kind": "account", "label": "Account NOVA-002", "aliases": [], "identifiers": []},
+    {"synthetic": true, "id": "loc.pier9", "kind": "location", "label": "Pier 9 Warehouse", "aliases": ["Pier 9"], "identifiers": []}
+  ]
+}

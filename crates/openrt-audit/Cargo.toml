@@ -1,0 +1,21 @@
+[package]
+name = "openrt-audit"
+description = "ADR-002 chained, tamper-evident audit log written through the openrt store"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+authors.workspace = true
+license.workspace = true
+
+[dependencies]
+openrt-core = { workspace = true }
+openrt-persistence = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+thiserror = { workspace = true }
+sha2 = { workspace = true }
+hex = { workspace = true }
+async-trait = { workspace = true }
+tokio = { workspace = true }
+[lints]
+workspace = true

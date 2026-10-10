@@ -1,0 +1,27 @@
+[package]
+name = "openrt-orch"
+description = "OpenRT multi-agent orchestration: role sub-agents and workflow DAG execution engine (P2.3)"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+authors.workspace = true
+
+[dependencies]
+openrt-core = { workspace = true }
+openrt-agents = { workspace = true }
+openrt-blackboard = { workspace = true }
+openrt-persistence = { workspace = true }
+openrt-telemetry = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+thiserror = { workspace = true }
+async-trait = { workspace = true }
+tokio = { workspace = true }
+
+[dev-dependencies]
+uuid = { workspace = true }
+openrt-tools = { workspace = true, features = ["demo"] }
+openrt-models = { workspace = true }
+[lints]
+workspace = true

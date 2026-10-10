@@ -1,0 +1,84 @@
+[package]
+name = "openrt-runtime"
+description = "OpenRT core runtime: bootstrap, lifecycle, session/task orchestration"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+authors.workspace = true
+
+[dependencies]
+openrt-core = { workspace = true }
+openrt-config = { workspace = true }
+openrt-telemetry = { workspace = true }
+openrt-persistence = { workspace = true }
+openrt-models = { workspace = true }
+openrt-tools = { workspace = true }
+openrt-computer = { workspace = true }
+openrt-sandbox = { workspace = true }
+openrt-safety = { workspace = true }
+openrt-permissions = { workspace = true }
+openrt-resources = { workspace = true }
+openrt-agents = { workspace = true }
+openrt-blackboard = { workspace = true }
+openrt-checkpoint = { workspace = true }
+openrt-orch = { workspace = true }
+openrt-compiler = { workspace = true }
+openrt-audit = { workspace = true }
+openrt-modes = { workspace = true }
+openrt-registry = { workspace = true }
+openrt-router = { workspace = true }
+openrt-timeseries = { workspace = true }
+openrt-memory = { workspace = true }
+openrt-workspace = { workspace = true }
+openrt-workspace-assets = { workspace = true }
+openrt-selfimprove = { workspace = true }
+openrt-bench = { workspace = true }
+openrt-industrial = { workspace = true }
+openrt-trading = { workspace = true }
+openrt-train = { workspace = true }
+openrt-model-cache = { workspace = true }
+openrt-hierarchy = { workspace = true }
+openrt-provider-llamacpp = { workspace = true }
+openrt-provider-vllm = { workspace = true }
+openrt-policy = { workspace = true }
+openrt-secrets = { workspace = true }
+openrt-netpol = { workspace = true }
+openrt-enclave = { workspace = true }
+openrt-observability = { workspace = true }
+openrt-supervisor = { workspace = true }
+openrt-platform = { workspace = true }
+openrt-scan = { workspace = true }
+openrt-fabric = { workspace = true }
+openrt-database = { workspace = true }
+openrt-office = { workspace = true }
+openrt-ingest = { workspace = true }
+openrt-vlm = { workspace = true }
+openrt-embeddings = { workspace = true }
+openrt-browser = { workspace = true }
+openrt-mcp = { workspace = true }
+openrt-verify = { workspace = true }
+openrt-verifier = { workspace = true }
+openrt-knowledge = { workspace = true }
+openrt-evidence = { workspace = true }
+openrt-retrieval = { workspace = true }
+openrt-shield = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+thiserror = { workspace = true }
+async-trait = { workspace = true }
+tokio = { workspace = true, features = ["rt-multi-thread"] }
+tracing = { workspace = true }
+uuid = { workspace = true }
+
+[features]
+default = []
+ollama = ["openrt-models/ollama", "openrt-embeddings/ollama"]
+llamacpp = ["openrt-provider-llamacpp/llamacpp"]
+vllm = ["openrt-provider-vllm/vllm"]
+
+[dev-dependencies]
+# `DirectExecutor` is test-only (SEC-04): enabled for this crate's test build.
+openrt-tools = { workspace = true, features = ["demo"] }
+[lints]
+workspace = true

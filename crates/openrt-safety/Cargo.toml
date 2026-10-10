@@ -1,0 +1,11 @@
+[package]
+name = "openrt-safety"
+version = "0.1.0"
+edition = "2021"
+description = "ADR-008 HALT signal + per-scope kill switch mechanisms"
+license.workspace = true
+
+[dependencies]
+tokio = { workspace = true }
+[lints]
+workspace = true

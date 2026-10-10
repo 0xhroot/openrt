@@ -1,0 +1,22 @@
+[package]
+name = "openrt-modes"
+description = "ADR-003 Provisioning/Sovereign execution-mode state machine with audited transitions"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+authors.workspace = true
+license.workspace = true
+
+[dependencies]
+openrt-core = { workspace = true }
+openrt-config = { workspace = true }
+openrt-persistence = { workspace = true }
+openrt-audit = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+thiserror = { workspace = true }
+tokio = { workspace = true }
+chrono = { workspace = true }
+async-trait = { workspace = true }
+[lints]
+workspace = true

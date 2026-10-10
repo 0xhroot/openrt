@@ -1,0 +1,28 @@
+[package]
+name = "openrt-fabric"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+description = "Phase 7B Tool Fabric core: tool metadata catalog, discovery, normalized errors, artifact records, application adapters"
+publish = false
+
+[dependencies]
+openrt-core = { workspace = true }
+openrt-tools = { workspace = true }
+openrt-persistence = { workspace = true }
+openrt-verify = { workspace = true }
+openrt-platform = { workspace = true }
+openrt-modes = { workspace = true }
+openrt-netpol = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+thiserror = { workspace = true }
+async-trait = { workspace = true }
+tokio = { workspace = true, features = ["rt", "time", "fs", "macros"] }
+chrono = { workspace = true }
+uuid = { workspace = true }
+url = { workspace = true }
+
+[lints]
+workspace = true
